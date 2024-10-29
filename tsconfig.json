@@ -1,11 +1,20 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
+    "noImplicitAny": true, // Не дает использовать переменные без явного указания типа
+    "module": "ESNext",
+    "target": "es5", // в какую версию будем компилировать es5 - для поддержки браузеров
     "jsx": "react",
-    "allowJs": true,
-    "moduleResolution": "node"
+    "allowJs": true, // Обработка не только TS, но и JS файлов
+    "moduleResolution": "node",
+    // Вместо common.js (require) позволяет использовать импорты с (* as)
+    "esModuleInterop": true,
+    // Убирает у импортов (* as), превращает в обычный импорт
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
   }
 }

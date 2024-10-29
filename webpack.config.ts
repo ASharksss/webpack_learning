@@ -1,8 +1,12 @@
-const path = require('path')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-const webpack = require('webpack')
+import  path from 'path'
+import  HTMLWebpackPlugin from "html-webpack-plugin"
+import  webpack from "webpack"
 
-module.exports = {
+// const path = require('path')
+// const HTMLWebpackPlugin = require('html-webpack-plugin')
+// const webpack = require('webpack')
+
+const config: webpack.Configuration = {
   mode: 'development',
   entry: path.resolve(__dirname, 'src', 'index.ts'),
   output: {
@@ -29,3 +33,5 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'] //Файлы, у которых при импорте не будем указывать расширение
   }
 }
+
+export default config
