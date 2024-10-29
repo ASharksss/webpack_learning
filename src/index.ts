@@ -1,3 +1,3 @@
 import {sayHi} from "./test";
 
-sayHi()
+sayHi(123)
