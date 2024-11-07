@@ -7,6 +7,8 @@
     "jsx": "react",
     "allowJs": true, // Обработка не только TS, но и JS файлов
     "moduleResolution": "node",
+    //Для абсолютного импорта
+    "baseUrl": ".",
     // Вместо common.js (require) позволяет использовать импорты с (* as)
     "esModuleInterop": true,
     // Убирает у импортов (* as), превращает в обычный импорт
